@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calcul de facture</title>
+        <link rel="stylesheet" href="style/stylesheet.css">
+        <script src="javascript.js"></script>
+    </head>
+    <body>
+        <div class="gradient">
+    <!-- à afficher
+        - montant brut
+        - remise
+        - frais de livraisons
+        - montant net HT
+        - montant TVA
+        - montant TTC
+        - Montant Net à payer(en connaissant la quantité, le prix unitaire, le taux de remise
+        les frais de livraison suivant le code de livraison (code 1 : 10 euros, code 2 : 20 euros,
+        code 3 : 30 euros et code 4 : offert)) -->
+            <header>
+                <div class="titre">
+                <h1>Calculateur de facture</h1>
+                </div>
+            </header>
+            <main>
+                <div class="formulaire">
+                    <form class="form_marg">
+                        <div class="flex marge">
+                            <label for="qtty" class="bot_marg top_marg">Nombre de produits :</label>
+                            <input type="number" class="height" id="qtty" name="qtty"><br>
+                            <label for="prixu" class="bot_marg">Prix unitaire :</label>
+                            <input type="number" class="height" id="prixu" name="prixu"><br>
+                        </div>
+                        <div class="centre marge">
+                            <input type="checkbox" id="accorde" name="remise" value="oui">
+                            <label for="accorde">Remise accordée</label><br>
+                        </div>                    
+                        <p class="centre marge">Frais de livraison :</p>
+                        <div class="centre marge">
+                            <input type="radio" id="frais1" name="frais" value="code1">
+                            <label for="frais1">Code 1</label>
+                            <input type="radio" id="frais2" name="frais" value="code2">
+                            <label for="frais2">Code 2</label>
+                            <input type="radio" id="frais3" name="frais" value="code3">
+                            <label for="frais3">Code 3</label>
+                            <input type="radio" id="frais4" name="frais" value="code4">
+                            <label for="frais4">Code 4</label>
+                        </div>
+                        <div class="centre marge">
+                            <button type="button" id="calcule" onclick="calculetotal();">Calculer</button>
+                        </div>
+                        <h4 id="error"></h4>
+                    </form>
+                </div>
+                <div id="facture" class="centre fact">
+                    <h4>Facture Finale</h4>
+                    <div class="facflex">
+                        <div class="align">
+                            <span class="test">Montant Brut</span>
+                            <span class="mep" id="mbrut"></span></br>
+                            <!-- <input type="number" id="mbrut" disabled> -->
+                        </div>
+                        <div class="align">
+                            <span class="test">Remise</span>
+                            <span class="mep" id="discount"></span></br>
+                            <!-- <input type="number" id="discount" disabled> -->
+                        </div>
+                        <div class="align">
+                            <span class="test">Frais de livraisons</span>
+                            <span class="mep" id="fraisliv"></span></br>
+                            <!-- <input type="number" id="fraisliv" disabled> -->
+                        </div>
+                        <div class="align">
+                            <span class="test">Montant net HT</span>
+                            <span class="mep" id="htamount"></span></br>
+                            <!-- <input type="number" id="htamount" disabled> -->
+                        </div>
+                        <div class="align">
+                            <span class="test">TVA</span>
+                            <span class="mep" id="tva"></span></br>
+                            <!-- <input type="number" id="tva" disabled> -->
+                        </div>
+                        <div class="align">
+                            <span class="test">Montant TTC</span>
+                            <span class="mep" id="ttcamount"></span></br>
+                            <!-- <input type="number" id="ttcamount" disabled> -->
+                        </div>
+                        <div class="align">
+                            <span class="test">Montant Net à payer</span>
+                            <span class="pem" id="netamount"></span></br>
+                            <!-- <input type="number" id="netamount" disabled> -->
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

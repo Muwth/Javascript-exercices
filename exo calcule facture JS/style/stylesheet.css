@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#facture{
+    display: none;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 30%;
+    position: relative;
+    left:5%;
+}
+
+.gradient{
+    background-image: linear-gradient(to bottom right, transparent, RGBA(180,0,255,0.5), RGBA(0,211,211,0.5)), url("../img/background_flou.jpg");
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+main{
+    padding-bottom: 5%;
+}
+
+#error{
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: rgb(255, 4, 66);
+}
+
+h1{
+    text-align: center;
+    color: white;
+    margin: 0 35% 4%;
+    padding: 10px 0;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.centre{
+    text-align: center;
+}
+
+.formulaire{
+    border-radius: 30px;
+    width: 30%;
+    margin: auto;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.60);
+    color: whitesmoke;
+    box-shadow: 0px 10px 10px black;
+    z-index: 9999;
+}
+
+.top_marg{
+    margin-top: 30px;
+}
+
+.bot_marg{
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+input[type=number], select{
+    border: 1.5px solid purple;
+    padding: 10px 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type=number]:focus{
+    border-color: transparent;
+    box-shadow: 0 0 0 2px rgb(132, 0, 255);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.height{
+    height: 20px;
+}
+
+.marge{
+    margin: 25px 50px;
+}
+
+button{
+    padding: 4px 10px;
+    background-color: #4b199b8f;
+    color: white;
+    border: 2px solid rgb(70, 0, 70);
+    border-radius: 6px;
+    transform: translate(0px, 15px);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.589);
+    transition: box-shadow 1s, background-color 1s;
+}
+
+button:hover{
+    border: 2px solid purple;
+    background-color: #5f29b68f;
+    box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.589);
+}
+
+.fact{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0 30%;
+}
+
+.facflex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 80px;
+}
+ h4{
+     font-size: 1.3em;
+     padding: 10px 0;
+ }
+
+.mep{
+    border: 1px solid rgb(156, 155, 155);
+    border-radius: 3px;
+    background-color: rgb(221, 221, 221);
+    padding: 0 5px;
+    color: black;
+}
+
+.pem{
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 3px;
+    background-color: rgb(221, 221, 221);
+    padding: 0 5px;
+    color: black;
+}
+
+.align{
+    width: 50%;
+    display: grid;
+}
